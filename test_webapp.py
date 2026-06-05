@@ -60,6 +60,9 @@ def test_webapp(driver):
     checkout.final_continue()
     time.sleep(3)
 
+    driver.close()
+    driver.switch_to.window(driver.window_handles[0])
+    time.sleep (2)
     logout.logging_out()
     time.sleep(3)
 
